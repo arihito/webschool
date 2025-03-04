@@ -2,9 +2,9 @@
   
 ## Improve(成長する:仮)
 
-![](https://img.shields.io/badge/Version-1.0.1-ff0000.svg)
+![](https://img.shields.io/badge/Version-1.0.1-3299cc.svg)
 
-![GitHub Pages](https://placekitten.com/200/200)
+[GitHub Pages](https://arihito.github.io/webschool/)
 
 - - -
 
