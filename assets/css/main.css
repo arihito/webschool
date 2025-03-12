@@ -181,15 +181,15 @@ em {
   width: 120px;
   height: 120px;
   animation-delay: 0s;
-  animation: pulsate-play-btn 2s;
-  animation-direction: forwards;
+  animation: pulsate-play-btn 1s;
+  animation-direction: alternate;
   animation-iteration-count: infinite;
-  animation-timing-function: steps;
+  animation-timing-function: ease-in-out;
   opacity: 1;
   border-radius: 50%;
   border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
-  top: -15%;
-  left: -15%;
+  top: -13.2%;
+  left: -13.2%;
   background: rgba(198, 16, 0, 0);
 }
 
@@ -330,7 +330,7 @@ em {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
+    padding: 10px 18px;
     font-size: 1.6rem;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -357,6 +357,35 @@ em {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+  }
+
+  /*-------------------------
+  ホバーアニメーション
+-------------------------*/
+  .navmenu > ul > li a:hover {
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu > ul > li a {
+    position: relative;
+  }
+
+  .navmenu > ul > li a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--nav-hover-color);
+    bottom: -10px;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s;
+  }
+
+  .navmenu > ul > li a:hover::after {
+    transform: scale(1, 1);
+    transform-origin: left top;
   }
 
   .navmenu .dropdown ul {
@@ -826,6 +855,12 @@ em {
   font-size: 2rem;
 }
 
+@media (max-width: 991px) {
+  .sub-title br {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -886,6 +921,12 @@ section,
   z-index: 2;
 }
 
+@media (max-width: 991px) {
+  .section-title p {
+    font-size: 1.8rem;
+    line-height: 2.1;
+  }
+}
 @media (max-width: 575px) {
   .section-title h2 {
     font-size: 2.8rem;
@@ -1520,6 +1561,7 @@ section,
   line-height: 0;
   padding: 0;
   overflow: hidden;
+  transform: scale(0.96);
 }
 
 .portfolio .portfolio-item::after {
@@ -1649,11 +1691,23 @@ section,
 .testimonials .testimonial-item p {
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
+  height: 32vh;
   background: color-mix(in srgb, var(--default-color), transparent 97%);
   position: relative;
   border-radius: 6px;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .testimonials .testimonial-item p {
+    height: auto;
+  }
+  .testimonials .testimonial-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .testimonials .swiper-wrapper {
@@ -1817,10 +1871,22 @@ section,
   border-radius: 1rem;
   transition: all 0.3s ease;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
 }
 
 .pricing .pricing-card:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .pricing-card .pricing-item {
+  grid-row: 1 / 2;
+}
+
+.pricing .pricing-card a.btn-primary {
+  grid-row: 2 / 3;
+  align-self: end;
 }
 
 .pricing .pricing-card.popular {
@@ -1848,8 +1914,9 @@ section,
 }
 
 .pricing .pricing-card.popular .btn-light {
-  background: var(--contrast-color);
-  color: var(--accent-color);
+  background: var(--contrast-color) !important;
+  color: var(--accent-color) !important;
+  font-weight: bold;
 }
 
 .pricing .pricing-card.popular .btn-light:hover {
@@ -1886,10 +1953,82 @@ section,
   line-height: 1;
 }
 
+.pricing .pricing-card .price .basic {
+  background: 
+  radial-gradient(
+    ellipse at top, 
+    var(--light-color), transparent
+  ),
+  radial-gradient(
+    ellipse at center, 
+    var(--nav-dropdown-background-color), transparent
+  ),
+  radial-gradient(
+    ellipse at left, 
+    transparent, var(--nav-dropdown-hover-color), var(--heading-light-color)
+  ),
+  radial-gradient(
+    ellipse at bottom, 
+    var(--accent2-color), transparent
+  );
+}
+.pricing .pricing-card .price .platinum {
+  background: 
+  radial-gradient(
+    ellipse at top, 
+    #B5B8B1, transparent
+  ),
+  radial-gradient(
+    ellipse at center, 
+    #e3f3f8, transparent
+  ),
+  radial-gradient(
+    ellipse at left, 
+    transparent, #abacca, #4d5d69, #0792d8
+  ),
+  radial-gradient(
+    ellipse at bottom, 
+    #A6A8A7, transparent
+  );
+}
+.pricing .pricing-card .price .gold {
+  background: 
+  radial-gradient(
+    ellipse at top, 
+    #a39546, transparent
+  ),
+  radial-gradient(
+    ellipse at center, 
+    #d1cdab, transparent
+  ),
+  radial-gradient(
+    ellipse at left, 
+    transparent, #816b10, #744909, brown
+  ),
+  radial-gradient(
+    ellipse at bottom, 
+    #c78a51, transparent
+  );
+}
+
 .pricing .pricing-card .price .amount {
   font-size: 7.2rem;
   font-weight: 700;
   line-height: 1;
+  background-size: 200% 100%;
+  animation: gradientAnimation 4s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .pricing .pricing-card .price .period {
@@ -2311,7 +2450,6 @@ section,
   margin-top: 30px;
   background: var(--deep-color);
   width: 100%;
-  height: 260px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -2354,10 +2492,17 @@ section,
 
 .service-details .services-contents {
   overflow: hidden;
-  height: 100vh;
+  height: 120vh;
 }
+
+@media (max-width: 991px) {
+  .service-details .services-contents {
+    height: 110vh;
+  }
+}
+
 .service-details .scrollspy-content {
-  margin-bottom: 11vh;
+  margin-bottom: 20vh;
 }
 .service-details .scrollspy-content img {
   width: 100%;
@@ -2369,10 +2514,14 @@ section,
 .service-details h3 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin: 10px 0 20px;
+  margin: 10px 0 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px dotted #ddd;
 }
 .service-details h3 i {
   margin-right: 8px;
+  font-size: 3rem;
+  vertical-align: middle;
 }
 
 .service-details p {
@@ -2391,6 +2540,7 @@ section,
   padding: 5px 0;
   display: flex;
   align-items: center;
+  font-size: 1.8rem;
 }
 
 .service-details ul i {
