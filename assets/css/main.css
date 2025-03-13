@@ -856,6 +856,9 @@ em {
 }
 
 @media (max-width: 991px) {
+  .sub-title {
+    padding: 0 20px;
+  }
   .sub-title br {
     display: none;
   }
@@ -1954,61 +1957,31 @@ section,
 }
 
 .pricing .pricing-card .price .basic {
-  background: 
-  radial-gradient(
-    ellipse at top, 
-    var(--light-color), transparent
-  ),
-  radial-gradient(
-    ellipse at center, 
-    var(--nav-dropdown-background-color), transparent
-  ),
-  radial-gradient(
-    ellipse at left, 
-    transparent, var(--nav-dropdown-hover-color), var(--heading-light-color)
-  ),
-  radial-gradient(
-    ellipse at bottom, 
-    var(--accent2-color), transparent
-  );
+  background: radial-gradient(ellipse at top, var(--light-color), transparent),
+    radial-gradient(
+      ellipse at center,
+      var(--nav-dropdown-background-color),
+      transparent
+    ),
+    radial-gradient(
+      ellipse at left,
+      transparent,
+      var(--nav-dropdown-hover-color),
+      var(--heading-light-color)
+    ),
+    radial-gradient(ellipse at bottom, var(--accent2-color), transparent);
 }
 .pricing .pricing-card .price .platinum {
-  background: 
-  radial-gradient(
-    ellipse at top, 
-    #B5B8B1, transparent
-  ),
-  radial-gradient(
-    ellipse at center, 
-    #e3f3f8, transparent
-  ),
-  radial-gradient(
-    ellipse at left, 
-    transparent, #abacca, #4d5d69, #0792d8
-  ),
-  radial-gradient(
-    ellipse at bottom, 
-    #A6A8A7, transparent
-  );
+  background: radial-gradient(ellipse at top, #b5b8b1, transparent),
+    radial-gradient(ellipse at center, #e3f3f8, transparent),
+    radial-gradient(ellipse at left, transparent, #abacca, #4d5d69, #0792d8),
+    radial-gradient(ellipse at bottom, #a6a8a7, transparent);
 }
 .pricing .pricing-card .price .gold {
-  background: 
-  radial-gradient(
-    ellipse at top, 
-    #a39546, transparent
-  ),
-  radial-gradient(
-    ellipse at center, 
-    #d1cdab, transparent
-  ),
-  radial-gradient(
-    ellipse at left, 
-    transparent, #816b10, #744909, brown
-  ),
-  radial-gradient(
-    ellipse at bottom, 
-    #c78a51, transparent
-  );
+  background: radial-gradient(ellipse at top, #a39546, transparent),
+    radial-gradient(ellipse at center, #d1cdab, transparent),
+    radial-gradient(ellipse at left, transparent, #816b10, #744909, brown),
+    radial-gradient(ellipse at bottom, #c78a51, transparent);
 }
 
 .pricing .pricing-card .price .amount {
@@ -2086,6 +2059,100 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-card {
+  height: 100%;
+  padding: 30px;
+  background: var(--surface-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.services .service-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.services .service-card:hover .icon {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+card:hover .read-more {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.services .services-plan {
+  padding-left: 0;
+}
+
+.services .services-plan li {
+  margin: 16px 0;
+  list-style-type: none;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted #ccc;
+}
+
+.services .services-plan li strong {
+  font-size: 1.4rem;
+}
+.services .services-plan li span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.services .service-card .icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-size: 28px;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.services .service-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  vertical-align: bottom;
+}
+
+.services .service-card .service-month {
+  font-size: 4.2rem;
+}
+
+.services .service-card p {
+  margin-bottom: 25px;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.services .service-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.services .service-card .read-more i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.services .service-card .read-more:hover i {
+  transform: translateX(5px);
+}
+
+/*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
 .faq .faq-title {
@@ -2099,6 +2166,13 @@ section,
   font-size: 2rem;
   color: var(--default-color);
   margin-bottom: 2rem;
+}
+
+@media (max-width: 991px) {
+  .faq .faq-title,
+  .faq .faq-description {
+    padding: 0 20px;
+  }
 }
 
 .faq .faq-arrow {

@@ -60,8 +60,12 @@
                                 <li><a href="#team">講師紹介</a></li>
                             </ul>
                         </li>
-                        <li><a href="#pricing">受講料金</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li class="dropdown"><a href="#pricing"><span>受講料金</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#services">開催日時</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -256,7 +260,7 @@
                                 <div class="icon">
                                     <img src="assets/img/language/html.png" alt="html">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>HTML / CSS</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>HTML / CSS</h3></a>
                                 <ul>
                                     <li><span class="term">VSCode :</span><span>Multi Cursol</span> / <span>Snippets</span> / <span>Emmet</span></li>
                                     <li><span class="term">CSS Display :</span><span>Flexbox</span> / <span>GridLayout</span></li>
@@ -270,7 +274,7 @@
                                 <div class="icon">
                                     <img src="assets/img/language/tailwind.png" alt="tailwind">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>Bootstrap / TailwindCSS</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>Bootstrap / TailwindCSS</h3></a>
                                 <ul>
                                     <li><span class="term">Bootstrap :</span><span>GridSystem</span> / <span>Component</span> / <span>Utility</span></li>
                                     <li><span class="term">TailwindCSS :</span><span>UtilityFirst</span> / <span>Responsive</span> / <span>TailBlocks</span></li>
@@ -283,7 +287,7 @@
                                 <div class="icon">
                                     <img src="assets/img/language/github.png" alt="github">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>Linux / Git / GitHub</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>Linux / Git / GitHub</h3></a>
                                 <ul>
                                     <li><span class="term">Linux :</span><span>Basic</span> / <span>Vim</span> / <span>Snippets</span></li>
                                     <li><span class="term">Git :</span><span>Stash</span> / <span>Fetch</span> / <span>Rebase</span></li>
@@ -297,14 +301,14 @@
                                 <div class="icon">
                                     <img src="assets/img/language/laravel.png" alt="laravel">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>PHP / MySQL / Laravel</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>PHP / MySQL / Laravel</h3></a>
                                 <ul>
                                     <li><span class="term">PHP :</span><span>Interface</span> / <span>SessionLogin</span> / <span>SendMail</span></li>
                                     <li><span class="term">MySQL :</span><span>Basic</span> / <span>References</span></li>
                                     <li><span class="term">Laravel :</span><span>MVC CRUD</span> / <span>Relation</span> / <span>Livewire</span></li>
                                 </ul>
                                 <span class="small">6.5week</span>
-                                <a href="service-details.html" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
@@ -312,14 +316,14 @@
                                 <div class="icon">
                                     <img src="assets/img/language/next.png" alt="next">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>Vue / React / Next</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>Vue / React / Next</h3></a>
                                 <ul>
                                     <li><span class="term">Vue :</span><span>Basic</span> / <span>Component</span> / <span>TodoList</span></li>
                                     <li><span class="term">React :</span><span>Lifecycle</span> / <span>TypeScript</span> / <span>State</span></li>
                                     <li><span class="term">Next :</span><span>AppRouter</span> / <span>SSG</span> / <span>ServerComponent</span></li>
                                 </ul>
                                 <span class="small">1week</span>
-                                <a href="service-details.html" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
@@ -327,14 +331,14 @@
                                 <div class="icon">
                                     <img src="assets/img/language/python.png" alt="python">
                                 </div>
-                                <a href="service-details.html" class="stretched-link"><h3>Python / RPA</h3></a>
+                                <a href="details.html" class="stretched-link"><h3>Python / RPA</h3></a>
                                 <ul>
                                     <li><span class="term">Python :</span><span>Basic</span> / <span>OOP</span></li>
                                     <li><span class="term">RPA :</span><span>Pandas</span> / <span>BeautifulSoup</span> / <span>Scraping</span></li>
                                     <li><span class="term">AI Tools :</span><span>Gemini</span> / <span>Cline</span> / <span>Cursol</span></li>
                                 </ul>
                                 <span class="small">1week</span>
-                                <a href="service-details.html" class="stretched-link"></a>
+                                <a href="details.html" class="stretched-link"></a>
                             </div>
                         </div>
                     </div>
@@ -926,7 +930,53 @@
                                 <a href="#" class="btn btn-primary">申し込む<i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
+                        <div class="subscribe-detail">
+                            <p>キャンセルポリシーや、分割支払い、決済方法、振替受講の可否などの詳細は<a href="detail.html">こちら</a>からご確認ください。</p>
+                        </div>
                     </div>
+            </section>
+            <section id="services" class="services section light-background">
+                <div class="container section-title" data-aos="fade-up">
+                    <span>Date and time</span>
+                    <h2>開催日時</h2>
+                    <p class="sub-title">各プランの開始日から終了日となる<strong>開催予定の期間</strong>は以下になります。</p>
+                </div>
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row g-4">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-card d-flex">
+                                <div class="icon flex-shrink-0">
+                                    <i class="bi bi-laptop-fill"></i>
+                                </div>
+                                <div>
+                                    <h3>2025年<span class="service-month">7</span>月期</h3>
+                                    <ul class="services-plan">
+                                        <li><strong>ベーシックプラン</strong>：2025年<span>07月01日(火)</span>～<span>09月12日(金)</span></li>
+                                        <li><strong>プラチナプラン</strong>　：2025年<span>07月01日(火)</span>～<span>09月19日(金)</span></li>
+                                        <li><strong>ゴールドプラン</strong>　：2025年<span>07月01日(火)</span>～<span>10月03日(金)</span></li>
+                                    </ul>
+                                    <p><a href="details.html" class="read-more">開催についての詳細 <i class="bi bi-arrow-right"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-card d-flex">
+                                <div class="icon flex-shrink-0">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <div>
+                                    <h3>2025年<span class="service-month">11</span>月期</h3>
+                                    <ul class="services-plan">
+                                        <li><strong>ベーシックプラン</strong>：2025年<span>11月03日(月)</span>～2026年<span>01月16日(金)</span></li>
+                                        <li><strong>プラチナプラン</strong>　：2025年<span>11月03日(月)</span>～2026年<span>01月23日(金)</span></li>
+                                        <li><strong>ゴールドプラン</strong>　：2025年<span>11月03日(月)</span>～2026年<span>02月06日(金)</span></li>
+                                    </ul>
+                                    <p><a href="details.html" class="read-more">開催についての詳細 <i class="bi bi-arrow-right"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="faq-9 faq section light-background" id="faq">
                 <div class="container">
@@ -1045,7 +1095,7 @@
                                     <i class="bi bi-geo-alt flex-shrink-0"></i>
                                     <div>
                                         <h3>開催場所</h3>
-                                        <p>東京新宿駅周辺のレンタルオフィス<br>(申し込み人数により開催場所変更)</p>
+                                        <p>東京新宿駅周辺のレンタルオフィス<br>(参加人数に応じて開催場所調整)</p>
                                     </div>
                                 </div>
                                 <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
@@ -1062,7 +1112,7 @@
                                         <p><del>info@sample.com</del></p>
                                     </div>
                                 </div>
-                                <iframe src="https://www.google.com/maps/d/embed?mid=1CIYnn24aOuRE6HMs_lE-m30FA6c3mGk&ehbc=2E312F" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2724.8842245266896!2d139.69821673896647!3d35.690500379016335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f5!2m1!1z5paw5a6_6aeF6KW_5Y-j!5e0!3m2!1sja!2sjp!4v1741844844373!5m2!1sja!2sjp" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -1140,6 +1190,7 @@
                             <li><i class="bi bi-chevron-right"></i> <a href="#testimonials">修了生の感想</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#team">講師紹介</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#pricing">受講料金</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#services">開催日時</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
@@ -1171,6 +1222,8 @@
         <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
         <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
         <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/skrollr/skrollr.min.js"></script>
+        <script src="assets/vendor/luxy/luxy.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
         <script src="assets/js/main.js"></script>
